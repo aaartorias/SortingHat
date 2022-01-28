@@ -10,7 +10,7 @@ public class DeclinedStudent {
         this.students = new HashSet<>();
     }
 
-    public void addNonAssignedStudent(Integer studentId) {
+    public void add(Integer studentId) {
         students.add(studentId);
     }
 
@@ -18,7 +18,7 @@ public class DeclinedStudent {
         return students;
     }
 
-    public boolean studentExists(Integer studentId) {
+    public boolean exists(Integer studentId) {
         return students.contains(studentId);
     }
 }

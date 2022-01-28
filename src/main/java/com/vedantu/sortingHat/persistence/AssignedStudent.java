@@ -5,12 +5,13 @@ import java.util.*;
 public class AssignedStudent {
     HashMap<String, List<Integer>> studentsByHouse;
     Set<Integer> students;
+
     public AssignedStudent() {
         this.studentsByHouse = new HashMap<>();
         this.students = new HashSet<>();
     }
 
-    public void assignHouseToStudent(String houseId, Integer studentId) {
+    public void add(String houseId, Integer studentId) {
         if (!studentsByHouse.containsKey(houseId)) {
             studentsByHouse.put(houseId, new ArrayList<>());
         }
@@ -26,7 +27,7 @@ public class AssignedStudent {
         return studentsByHouse;
     }
 
-    public boolean studentExists(Integer studentId) {
+    public boolean exists(Integer studentId) {
         return students.contains(studentId);
     }
 }
